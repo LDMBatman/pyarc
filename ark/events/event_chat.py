@@ -43,4 +43,4 @@ class EventChat(object):
                 """Rcon.kick_player(steamid)"""
                 """msg=Lang.get('chat_filter_player_kicked').format(player_name,res)"""
                 msg=Lang.get('chat_filter_forbidden_word').format(player_name,res)
-                Rcon.broadcast(msg, None)
+                Rcon.broadcast(msg, rcon.response_callback_response_only)
